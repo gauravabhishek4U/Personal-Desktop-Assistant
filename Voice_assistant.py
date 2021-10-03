@@ -178,14 +178,14 @@ if __name__ == "__main__":
 
         # Code for using entertainment features
         elif 'music' in query:
-            music_dir = 'C:\\Users\\Abhishek Gaurav\\Music'
+            music_dir = 'Specify the directory of music in your system'
             songs = os.listdir(music_dir)
             print(songs)
             speak("Alright please wait, playing music for you")
             os.startfile(os.path.join(music_dir, songs[0]))
 
         elif 'video' in query:
-            video_dir = 'D:\\Videos\\Entertainment'
+            video_dir = 'Specify the directory of videos in your system'
             videos= os.listdir(video_dir)
             print(videos)
             speak("Alright please wait, playing videos for you")
@@ -240,7 +240,7 @@ if __name__ == "__main__":
             soup_page = soup(xml_page, "xml")
             news_list = soup_page.findAll("item")
 
-            speak("Alright, these are a few links to the some news. You can click on anyone to open it in webbrowser.")
+            speak("Alright, these are a few links to the some news. You can click on anyone to open it in web browser.")
             # Print news title, url and publish date
             for news in news_list:
                 print(news.title.text)
